@@ -85,6 +85,7 @@ def main():
         return "Корректная траектория не может быть найдена. \n"
     elif ALPHA != '?':
         graphics_plot(math.radians(ALPHA))
+        plt.show()
         y, x = try_alpha(math.radians(ALPHA))
         if y == TARGET_HEIGHT and x == DISTANCE:
             return "Попадание!"
