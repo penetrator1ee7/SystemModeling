@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import math
-from UIv3 import Ui_MainWindow
+from UIv4 import Ui_MainWindow
 import sys
 from PyQt5 import QtWidgets
 BALL_HEIGHT = 2
@@ -132,6 +132,8 @@ if __name__ == '__main__':
                 DRAW_FIRST = float(self.ui.textEdit_DrawFirst.toPlainText())
                 DRAW_LAST = float(self.ui.textEdit_DrawLast.toPlainText())
                 TIME_RESTRICTION = self.ui.textEdit_TimeRestriction.toPlainText()
+                wind_speed = float(self.ui.textEdit_Wind.toPlainText())
+                SPEED = SPEED - wind_speed
                 if TIME_RESTRICTION != '?':
                     TIME_RESTRICTION = float(TIME_RESTRICTION)
                 ALPHA = self.ui.textEdit_ALPHA.toPlainText()
